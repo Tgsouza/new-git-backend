@@ -1,0 +1,50 @@
+Setting up terminal.
+First open the terminal on VScode, go to the + sign on the terminal and select the git bash.
+The command pallete have already been changed so that every time we use the terminal we start with the git bash.
+
+NODE REPL:
+READ
+EVAL
+PRINT
+LOOP
+Is an environment where user inputs are read and evaluated and then the results are returned to the user. For example, if I input on node 8+5 node will return 13 to me.
+
+
+NATIVE MODULES - Starting toolset, a bunch of features already included on node, like reading or writing on file, networking, etc...
+In order to use the modules we can require the modules from node.
+
+NPM - Is the place where we can find everything we need to use Node. Is a community tool library, we can access code for Node from anyone. 
+Is open source and we can search for any tool that other user have created. 
+We can initialize NPM module with init npm command
+This will create our configuration file that will be used to install npm packages on our projects.
+
+CSJ - Common JS, use the require keyword
+ESM - Echn Script modules, is a standard way to use JS on the backend and frontend, so uses the import keyword, instead of require. 
+    -To use ESM we need to include the "type: module" in our Node configuration file.
+
+Framework are a collection of libraries containing codes, it's like a advanced tool that uses "pre-set" code to simplify the developer life.
+
+To create a server:
+First thing we need to do is NPM init, to install the package. ( Remember to change the type to module)
+I'll create the server with npm i express ( This installs the express framework )
+Server request vocab consists in:
+Get - request resource
+Post - Sending resource
+Put and Patch - Update methods, put is when you want to replace the resource, and patch is used to patch up a resource
+Delete - is a request that there is something that needs to be deleted
+
+Request comes from the client side, response comes from server side. 
+
+NODEMON - auto update the servers and auto monitor the server changes
+
+POSTMAN - Used for testing requests. 
+
+Express Middleware - a function that will have all the access for requesting an object, responding to an object, and moving to the next middleware function in the application request-response cycle.
+We got pre-processing, authentication, error handling, logging types.
+    Morgan - Logs the requests with information 
+
+Custom middleware - To create a custom middleware we will use the same syntax, app.use((req, res, next) =>{our function() and next()}) the next() ensures that the program goes to the next part of the code.
+
+The order of the middleware is important.
+
+res.sendfile follows an exact path. We need to figure out the direct name, we can do this by importing dirname from path and fileURLtoPath from url packages. 
