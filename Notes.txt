@@ -48,3 +48,29 @@ Custom middleware - To create a custom middleware we will use the same syntax, a
 The order of the middleware is important.
 
 res.sendfile follows an exact path. We need to figure out the direct name, we can do this by importing dirname from path and fileURLtoPath from url packages. 
+
+EJS - Embedded Javscript
+Templating - Template languages are use for separation of concerns, the most commonly used on JS is EJS or Embedded JS. Excencially is HTML code with bits of javascript inside of it. This rebembers me of react.
+For this we need to stop using sendFile, this is strictly for static files. 
+For embedded we use the render instead, this allows us to specify the file we need to render on the screen and add a javascript object to pass properties using key value pairs.
+
+Separation of concerns - Separate our front-end from the backend. 
+
+EJS syntax:
+EJS output (=) is interpreted as javascript and carries the value on the tag.
+EJS execute( ) is only executable javascript code, we can write javascript and run inside the EJS code, like console log but does not give output. Could be used for a loop or condition for example.
+EJS render( - ) HTML syntax ejs.
+EJS show ( %% ) This is used to show the ejx tag. for teaching or presentation porpuse.
+EJS comment ( # ) Does not execute.
+EJS insert another EJS file (- include ("NameOfEJSFile.ejs")) allows to create components like headers of footers.  
+
+From the server to EJS we can use the render on javascript file with the object of items we are sending to the ejs. 
+
+EJS may crash the website if a variable doesn't exists, because is not checking for the existence beforehand, it calls the variable and then if doesn't exists crash the program. 
+Because of this we can use the locals."data" to check if the data exists before using it. 
+
+Partials & Layouts:
+    -Static files, the CSS or images to be included on the website never change. These are added to a "public" folder and use a middleware express.static.
+    -With partials we can use the include keyword from EJS and add part of the code that will be repeated on all of the website, like header, navbar, footer
+    With this we can focus in developing the content of the page instead of just repeated elements. This will also help with readability of the code.
+    
