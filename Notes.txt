@@ -73,4 +73,39 @@ Partials & Layouts:
     -Static files, the CSS or images to be included on the website never change. These are added to a "public" folder and use a middleware express.static.
     -With partials we can use the include keyword from EJS and add part of the code that will be repeated on all of the website, like header, navbar, footer
     With this we can focus in developing the content of the page instead of just repeated elements. This will also help with readability of the code.
-    
+
+______VERSION CONTROL_______
+
+git add <file>- put file into the staging react
+git commit - commit to the repository and gives a version
+git diff <file>- shows the difference between the new version and the latest
+git checkout <file>- revert back to the last position on the local repository
+Remote repository: Github \o/
+git remote add <origin> <url> - creates a remote
+git branch -M main - creates the main branch
+git push -u <remote name> <branch name> - this push the local repo for the remote repository using the u tag
+
+Git add - working dir to staging area
+Git commit - Staging area to Local repo (.git)
+Git push - local repo to remote repo (main)
+
+.gitignore - avoid sending sensitive information like api keys .exe etc...
+We need to create a .gitignore file and add the files we want our pushs to ignore to this file
+https://github.com/github/gitignore - templates
+*"git rm --cached -r ." - really helpful git, removes the items on staging area.
+
+
+git clone - used to clone remote repository to local repo and working directory
+Awesome for begginners - https://github.com/MunGell/awesome-for-beginners?tab=readme-ov-file#javascript
+
+git branch <name-of-the-branch> - This creates a new branch
+git branch - shows the available branches with * besides the current branch
+git checkout <branch-name> - swap between branches.
+from the main branch we can git merge <branch-name> - opens Vim (Another terminal) asking for a message for the commit, we can exit vim with :q! 
+
+-- SOME GIT EXERCIES TO PRACTICE -- https://learngitbranching.js.org/
+
+FORK - Gives read only access to collaborators. 
+A collaborator copy a remote repo, which creates their own remote repo, they clone their own remot repo to a local repo.
+The changes that they make are pushed to their remote repository, and they can do a "pull request", when the owner can accept to merge to the main project if they wants.
+ 
